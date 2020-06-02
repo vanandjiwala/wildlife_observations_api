@@ -14,7 +14,6 @@ class ObservationSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Observation
         fields = ['id','species','observer','country','state','location','lat','long']
-        extra_kwargs = {'observer': {'read_only': True},
-                        'species': {'read_only': True}}
+        extra_kwargs = {'observer': {'read_only': True}}
 
 
