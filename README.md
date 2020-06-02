@@ -1,5 +1,34 @@
 # wildlife_observations_api
 
+
+## Description
+Simple app to record bird/wildlife sightings.  
+
+##TODO
+* Script to populate lookup table
+* Import and export functionality for the lookup table
+* Validation and additional fields to cover date/time and other useful information
+* Implement dashboard for admin to create summary or perform other analysis on the combined data 
+
+## Models
+* Total three models user in this project. ```User, Species and Observation```.
+* User hold user related info. provided by django
+* Species is a lookup table which hold species name and its scientific name
+* Observation holds the detail like Country, state, species id(Foreign Key), user(Foreign key) 
+
+## Endpoints
+* ```/api/species/``` - User with valid token can perform CRUD
+* ```/api/observations/``` - User with valid token can perform CRUD. Observations are displayed for the logged in user only. 
+* ```/api/dashboard/``` - Work in progress. Admin should only get data and on front end the data can be used in report or can be visualized.
+* ```login``` - POST request to obtain authentication token
+
+## Testing
+Testing performed using 2 tools: [postman](https://www.postman.com/downloads/) and [ModHeader chrome plugin](https://chrome.google.com/webstore/detail/modheader/idgpnmonknjnojddfkpgkljpfnnfcklj?hl=en)
+
+####Note
+Make sure to turn off ModHeader plugin after testing, else it can mess up other website operations as well. 
+
+
 ## Installing Vagrant server
 
 There are 2 requirements to setup vagrant server

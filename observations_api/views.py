@@ -22,7 +22,6 @@ class ObservationViewSet(viewsets.ModelViewSet):
     authentication_classes = (TokenAuthentication,)
     permission_classes = (IsAuthenticated,)
     serializer_class = serializers.ObservationSerializer
-    #queryset = models.Observation.objects.all()
 
     def get_queryset(self):
         return models.Observation.objects.filter(observer=self.request.user.id)
