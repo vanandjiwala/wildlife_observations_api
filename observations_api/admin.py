@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import User, Species
 
-# Register your models here.
+@admin.register(Species)
+class PetAdmin(admin.ModelAdmin):
+    list_display = ['name', 'sc_name']
+
